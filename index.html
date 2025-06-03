@@ -39,15 +39,24 @@
 <p class="perlahan">Sembunyi perlahan 2</p>
 <button id="tombol1">Sembunyi</button>
 
+<p id="elemen2">Mengubah isi elemen</p>
+<button id="tombol2">Ubah isi</button>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   // memastikan dokumen html sudah siap
   $(document).ready(function(){
     // menyembunyikan paragraf
     $("#tombol1").click(function(){
+      
       $("#elemen1").hide();
       $(".perlahan").fadeOut("slow")
     });
+    
+    //mengubah isi paragraf 
+    $("#tombol2").click(function(){
+      $("#elemen2").html("Diisi <b>i hate you no someone else</b>")
+    })
   });
 </script>
 </body>
